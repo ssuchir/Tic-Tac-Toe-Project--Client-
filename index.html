@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Tic Tac Toe</title>
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div class= "container">
+  <h1>Tic Tac Toe</h1>
+
+  <p id="message"></p>
+
+  <form id="sign-up">
+
+<h2>Sign-up</h2>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      <button>submit!</button>
+
+  </form>
+
+  <form id="sign-in">
+    <fieldset>
+      <legend>Sign in!</legend>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="submit" value="Sign in!">
+    </fieldset>
+  </form>
+
+  <form id="sign-out" class="border">
+    <fieldset>
+      <legend>Sign Out!</legend>
+      <input type="submit" value="Sign out!">
+    </fieldset>
+  </form>
+
+  <form id="change-password" class="border">
+    <fieldset>
+      <legend>Change Password!</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password">
+      <input type="password" name="passwords[new]" placeholder="New Password">
+      <input type="submit" value="Change Password!">
+    </fieldset>
+  </form>
+
+   <div class="game-board-container hidden">
+        <div class="top-row">
+          <div id="box0" class="box">1</div>
+          <div id="box1" class="box">2</div>
+          <div id="box2" class="box">3</div>
+        </div>
+        <div class="middle-row">
+          <div id="box3" class="box">4</div>
+          <div id="box4" class="box">5</div>
+          <div id="box5" class="box">6</div>
+        </div>
+        <div class="bottom-row">
+          <div id="box6" class="box">7</div>
+          <div id="box7" class="box">8</div>
+          <div id="box8" class="box">9</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</body>
 </html>
