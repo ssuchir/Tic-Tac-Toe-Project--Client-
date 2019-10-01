@@ -2,10 +2,9 @@
 <html>
 
 <head>
-  <title>Tic Tac Toe</title>
+  <title>Tic Tac Toe </title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -15,64 +14,61 @@
 </head>
 
 <body>
-  <div class= "container">
   <h1>Tic Tac Toe</h1>
 
-  <p id="message"></p>
+<br>
 
-  <form id="sign-up">
-
-<h2>Sign-up</h2>
-      <input type="text" name="credentials[email]" placeholder="Email">
-      <input type="password" name="credentials[password]" placeholder="Password">
-      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-      <button>submit!</button>
-
-  </form>
-
-  <form id="sign-in">
-    <fieldset>
-      <legend>Sign in!</legend>
-      <input type="text" name="credentials[email]" placeholder="Email">
-      <input type="password" name="credentials[password]" placeholder="Password">
-      <input type="submit" value="Sign in!">
-    </fieldset>
-  </form>
-
-  <form id="sign-out" class="border">
-    <fieldset>
-      <legend>Sign Out!</legend>
-      <input type="submit" value="Sign out!">
-    </fieldset>
-  </form>
-
-  <form id="change-password" class="border">
-    <fieldset>
-      <legend>Change Password!</legend>
-      <input type="password" name="passwords[old]" placeholder="Old Password">
-      <input type="password" name="passwords[new]" placeholder="New Password">
-      <input type="submit" value="Change Password!">
-    </fieldset>
-  </form>
-
-   <div class="game-board-container hidden">
-        <div class="top-row">
-          <div id="box0" class="box">1</div>
-          <div id="box1" class="box">2</div>
-          <div id="box2" class="box">3</div>
-        </div>
-        <div class="middle-row">
-          <div id="box3" class="box">4</div>
-          <div id="box4" class="box">5</div>
-          <div id="box5" class="box">6</div>
-        </div>
-        <div class="bottom-row">
-          <div id="box6" class="box">7</div>
-          <div id="box7" class="box">8</div>
-          <div id="box8" class="box">9</div>
-      </div>
-    </div>
-    </div>
+<div id="board">
+  <div class="row">
+    <div id="0" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="0"></div>
+    <div id="1" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="1"></div>
+    <div id="2" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="2"></div>
   </div>
+<div class="row">
+    <div id="3" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="3"></div>
+    <div id="4" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="4"></div>
+    <div id="5" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="5"></div>
+  </div>
+  <div class="row">
+    <div id="6" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="6"></div>
+    <div id="7" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="7"></div>
+    <div id="8" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="8"></div>
+  </div>
+</div>
+
+<br>
+  <h2>Sign up</h2>
+  <form id='sign-up'>
+    <input type="email" name="credentials[email]" placeholder='Enter email..'>
+    <input type="password" name="credentials[password]" placeholder='password'>
+    <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
+    <input type="submit" class="btn btn-info" value="Sign up">
+  </form>
+
+  <h3 id="message"></h3>
+  <h2>Sign in</h2>
+  <form id='sign-in'>
+    <input type="email" name="credentials[email]"placeholder='Enter email..'>
+    <input type="password" name="credentials[password]"placeholder='password'>
+    <input type="submit" class="btn btn-info" value="Sign in">
+  </form>
+
+
+  <h2>Change Password</h2>
+    <form id='change-password'>
+    <input type="password" name="passwords[old]" placeholder='Enter old password'>
+    <input type="password" name="passwords[new]" placeholder='Enter new password'>
+    <input type="submit" class="btn btn-info" value="Submit">
+    </form>
+
+    <br>
+    <h2>Sign out</h2>
+      <form id='sign-out'>
+          <button class = "btn btn-primary" >sign-out</button>
+        </form>
+
+
+
 </body>
+
 </html>
