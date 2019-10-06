@@ -1,4 +1,4 @@
-'use strict'// if these don't work, check if i need ./
+'use strict'
 const config = require('../config')
 const store = require('../store')
 
@@ -23,7 +23,7 @@ const getGames = function () {
     data: '{}'
   })
 }
-
+// function that takes 3 arguments- an array w/ index to hold place and value of x or o
 const updateGame = function (index, value, over) {
   return $.ajax({
     url: config.apiUrl + `/games/${store.game.id}`,
@@ -34,10 +34,10 @@ const updateGame = function (index, value, over) {
     data: {
       game: {
         cell: {
-          index: index,
-          value: value
+          index: store.position,
+          value: store.player
         },
-        over: over
+        over: false
       }
     }
   })

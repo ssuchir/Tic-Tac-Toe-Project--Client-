@@ -16,29 +16,26 @@
 <body>
   <h1>Tic Tac Toe</h1>
 
-<br>
+  <br>
 
-<div id="board">
-  <div class="row">
-    <div id="0" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="0"></div>
-    <div id="1" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="1"></div>
-    <div id="2" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="2"></div>
+  <div class='board' id="board">
+    <div class="row gameBoard">
+      <div id="0" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="0"></div>
+      <div id="1" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="1"></div>
+      <div id="2" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="2"></div>
+      <div id="3" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="3"></div>
+      <div id="4" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="4"></div>
+      <div id="5" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="5"></div>
+      <div id="6" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="6"></div>
+      <div id="7" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="7"></div>
+      <div id="8" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="8"></div>
+    </div>
   </div>
-<div class="row">
-    <div id="3" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="3"></div>
-    <div id="4" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="4"></div>
-    <div id="5" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="5"></div>
-  </div>
-  <div class="row">
-    <div id="6" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="6"></div>
-    <div id="7" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="7"></div>
-    <div id="8" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="8"></div>
-  </div>
-</div>
 
-<br>
-  <h2>Sign up</h2>
+  <br>
+
   <form id='sign-up'>
+    <h2>Sign up</h2>
     <input type="email" name="credentials[email]" placeholder='Enter email..'>
     <input type="password" name="credentials[password]" placeholder='password'>
     <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
@@ -46,28 +43,31 @@
   </form>
 
   <h3 id="message"></h3>
-  <h2>Sign in</h2>
+
   <form id='sign-in'>
-    <input type="email" name="credentials[email]"placeholder='Enter email..'>
-    <input type="password" name="credentials[password]"placeholder='password'>
+    <h2>Sign in</h2>
+    <input type="email" name="credentials[email]" placeholder='Enter email..'>
+    <input type="password" name="credentials[password]" placeholder='password'>
     <input type="submit" class="btn btn-info" value="Sign in">
   </form>
 
 
-  <h2>Change Password</h2>
-    <form id='change-password'>
+
+  <form id='change-password'>
+    <h2>Change Password</h2>
     <input type="password" name="passwords[old]" placeholder='Enter old password'>
     <input type="password" name="passwords[new]" placeholder='Enter new password'>
     <input type="submit" class="btn btn-info" value="Submit">
-    </form>
+  </form>
 
-    <br>
+  <br>
+
+  <form id='sign-out'>
     <h2>Sign out</h2>
-      <form id='sign-out'>
-          <button class = "btn btn-primary" >sign-out</button>
-        </form>
+    <button class="btn btn-primary">sign-out</button>
+  </form>
 
-
+    <button class='board' id="play">play</button>
 
 </body>
 

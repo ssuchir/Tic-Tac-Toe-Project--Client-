@@ -8,13 +8,14 @@ const successMessage = function (newText) {
 }
 
 const failureMessage = function (newText) {
-  $('#message').text('newText')
+  $('#message').text(newText)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
 }
 
 const onSignUpSuccess = function () {
   successMessage('signed up successfully!')
+  $('#sign-up').trigger('reset')
 }
 
 const onSignUpFailure = function () {
@@ -26,9 +27,15 @@ const onSignInSuccess = function (responseData) {
   console.log('responseData is', responseData)
 
   // save the 'user' we got from the API inside of 'store'
-  // so we can use it later, from any file
+  // so we can use it later from any file
   store.user = responseData.user
   console.log('store is', store)
+
+  $('#board').show()
+  $('#change-password').show()
+  $('#sign-out').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
 }
 
 const onSignInFailure = function () {
@@ -42,11 +49,16 @@ const onchangepasswordSuccess = function () {
 const onchangepasswordFailure = function () {
   failureMessage('Changepassword failed')
 }
-const onSignoutSuccess = function () {
+const onSignOutSuccess = function () {
   successMessage('Signed out successfully!')
+  $('#board').hide()
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('#sign-up').show()
+  $('#sign-in').show()
 }
 
-const onSignoutFailure = function () {
+const onSignOutFailure = function () {
   failureMessage('Sign out failed')
 }
 module.exports = {
@@ -56,6 +68,6 @@ module.exports = {
   onSignInFailure,
   onchangepasswordSuccess,
   onchangepasswordFailure,
-  onSignoutSuccess,
-  onSignoutFailure
+  onSignOutSuccess,
+  onSignOutFailure
 }
