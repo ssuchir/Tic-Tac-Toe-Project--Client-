@@ -32,7 +32,7 @@ const switchPlayer = function () {
 }
 
 const checkIfEmpty = function (box) {
-  if (($(box).html() === 'x') || ($(box).html() === 'Os') || gameOver === true) {
+  if (($(box).html() === 'x') || ($(box).html() === 'O') || gameOver === true) {
     $('#message').text('invalid move')
   } else {
     console.log('the id of the box', $(box).attr('id'))
@@ -73,12 +73,9 @@ const checkWin = function () {
 }
 
 const playGame = function (event) {
-  // console.log(event.target)
-  // console.log(event.target.dataset.box)
   const box = event.target
   checkIfEmpty(box)
   switchPlayer()
-  // $(box).html(player)
   checkWin()
 }
 

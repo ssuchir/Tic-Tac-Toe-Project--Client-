@@ -13,17 +13,6 @@ const newGame = function () {
   })
 }
 
-const getGames = function () {
-  return $.ajax({
-    url: config.apiUrl + '/games',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: '{}'
-  })
-}
-// function that takes 3 arguments- an array w/ index to hold place and value of x or o
 const updateGame = function (index, value, over) {
   return $.ajax({
     url: config.apiUrl + `/games/${store.game.id}`,
@@ -43,8 +32,18 @@ const updateGame = function (index, value, over) {
   })
 }
 
+const getGamesPlayed = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/games',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   newGame,
-  getGames,
-  updateGame
+  updateGame,
+  getGamesPlayed
 }

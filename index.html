@@ -36,9 +36,9 @@
 
   <form id='sign-up'>
     <h2>Sign up</h2>
-    <input type="email" name="credentials[email]" placeholder='Enter email..'>
+    <input type="email" name="credentials[email]" placeholder='Enter email'>
     <input type="password" name="credentials[password]" placeholder='password'>
-    <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
+    <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
     <input type="submit" class="btn btn-info" value="Sign up">
   </form>
 
@@ -46,7 +46,7 @@
 
   <form id='sign-in'>
     <h2>Sign in</h2>
-    <input type="email" name="credentials[email]" placeholder='Enter email..'>
+    <input type="email" name="credentials[email]" placeholder='Enter email'>
     <input type="password" name="credentials[password]" placeholder='password'>
     <input type="submit" class="btn btn-info" value="Sign in">
   </form>
@@ -67,7 +67,14 @@
     <button class="btn btn-primary">sign-out</button>
   </form>
 
-    <button class='board' id="play">play</button>
+    <button class='btn btn-primary' id="play">New Game</button>
+
+<!-- // check -->
+  <div id="game-played">
+      <h2 class="hidden">Number of Games Played</h2>
+      <button id="games-played-button" class="hidden">Games Played</button>
+      <div id="get-games-played" class="hidden"></div>
+    </div>
 
 </body>
 
