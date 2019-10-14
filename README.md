@@ -14,11 +14,10 @@ HTML/CSS
 Bootstrap
 Javascript
 
-Unsolved Problems
-Still need to work on the game logic.. ran into some issues/syntax problems.
-Need to style and format the game better.
-Need to hide certain elements after certain interactions.
-Need to fix API auth issues.
+Some things to update:
+Styling and format of the webpage in differnet windows. 
+Better promts (with disappearing text)
+
 
 Wireframe
 https://imgur.com/bWScBSK
