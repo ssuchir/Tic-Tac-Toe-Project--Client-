@@ -33,9 +33,8 @@ const switchPlayer = function () {
 
 const checkIfEmpty = function (box) {
   if (($(box).html() === 'x') || ($(box).html() === 'O') || gameOver === true) {
-    $('#message').text('invalid move')
+    $('#message').text('Please click on an empty square.')
   } else {
-    console.log('the id of the box', $(box).attr('id'))
     store.position = $(box).attr('id')
     $(box).html(store.player)
     gameBoard[store.position] = store.player
@@ -46,28 +45,28 @@ const checkIfEmpty = function (box) {
 
 const checkWin = function () {
   if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) {
-    $('#message').text('WINNER is ' + gameBoard[0])
+    $('#message').text('The winner is player ' + gameBoard[0])
     gameOver = true
   } else if (gameBoard[3] !== '' && gameBoard[3] === gameBoard[4] && gameBoard[4] === gameBoard[5]) {
-    $('#message').text('WINNER is ' + gameBoard[3])
+    $('#message').text('The winner is player ' + gameBoard[3])
     gameOver = true
   } else if (gameBoard[6] !== '' && gameBoard[6] === gameBoard[7] && gameBoard[7] === gameBoard[8]) {
-    $('#message').text('WINNER is ' + gameBoard[6])
+    $('#message').text('The winner is player ' + gameBoard[6])
     gameOver = true
   } else if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[3] && gameBoard[3] === gameBoard[6]) {
-    $('#message').text('WINNER is ' + gameBoard[0])
+    $('#message').text('The winner is player ' + gameBoard[0])
     gameOver = true
   } else if (gameBoard[1] !== '' && gameBoard[1] === gameBoard[4] && gameBoard[4] === gameBoard[7]) {
-    $('#message').text('WINNER is ' + gameBoard[1])
+    $('#message').text('The winner is player ' + gameBoard[1])
     gameOver = true
   } else if (gameBoard[2] !== '' && gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8]) {
-    $('#message').text('WINNER is ' + gameBoard[2])
+    $('#message').text('The winner is player ' + gameBoard[2])
     gameOver = true
   } else if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[4] && gameBoard[4] === gameBoard[8]) {
-    $('#message').text('WINNER is ' + gameBoard[0])
+    $('#message').text('The winner is player ' + gameBoard[0])
     gameOver = true
   } else if (gameBoard[2] !== '' && gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6]) {
-    $('#message').text('WINNER is ' + gameBoard[2])
+    $('#message').text('The winner is player ' + gameBoard[2])
     gameOver = true
   }
 }

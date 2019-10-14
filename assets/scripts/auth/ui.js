@@ -15,7 +15,7 @@ const failureMessage = function (newText) {
 }
 
 const onSignUpSuccess = function () {
-  successMessage('signed up successfully!')
+  successMessage('Signed up successfully!')
   $('#sign-up').trigger('reset')
 }
 
@@ -25,7 +25,7 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (responseData) {
-  successMessage('signed in successfully!')
+  successMessage('Signed in successfully!')
   console.log('responseData is', responseData)
   $('#play').show()
   $('#board').show()
@@ -39,16 +39,16 @@ const onSignInSuccess = function (responseData) {
 }
 
 const onSignInFailure = function () {
-  failureMessage('Sign in failed')
+  failureMessage('Sign in failed.')
 }
 
 const onchangepasswordSuccess = function () {
-  successMessage('Changepassword successfully!')
+  successMessage('Password has successfully been changed.')
     $('#change-password').trigger('reset')
 }
 
 const onchangepasswordFailure = function () {
-  failureMessage('Changepassword failed')
+  failureMessage('Failed to change password. Please try again.')
   $('#change-password').trigger('reset')
 }
 const onSignOutSuccess = function () {
@@ -73,7 +73,7 @@ const onGetGamesSuccess = function (response) {
 
 const onGetGamesFailure = function (response) {
   console.log('fail', response)
-  $('#get-games-played').text('Game history retrieval failed')
+  $('#get-games-played').text('Failed to get Game History')
 }
 
 module.exports = {

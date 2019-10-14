@@ -1,6 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~animate.css/animate.min.css';
 
+
+
 h1 {
   text-align: center;
 }
@@ -10,16 +12,17 @@ h2 {
 }
 
 body {
-  background-color: white;
+  background-color: #EDEADA;
   margin: 100px;
   content: center;
 
-  .row {
+  .board {
     &:nth-child(-n+3) {
-      border-top: 0;
+      border: 0;
     }
   }
 }
+
 
 .square {
   display: block;
@@ -31,8 +34,12 @@ body {
   padding-top: 35px;
 }
 
+.square:hover {
+  background-color: #dedbcc;
+  cursor: pointer;
+}
+
 button {
   padding: 20px;
-  font-size: 30px;
   margin-top: 10px;
 }

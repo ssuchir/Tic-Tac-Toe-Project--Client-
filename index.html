@@ -5,10 +5,10 @@
   <title>Tic Tac Toe </title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Do not add `link` tags-->
+
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Do not add `script` tags-->
+
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
@@ -52,6 +52,16 @@
   </form>
 
 
+  <button class='btn btn-primary' id="play">New Game</button>
+  <br>
+  <div id="game-played">
+      <button id="games-played-button" class="btn btn-primary">Games Played</button>
+      <div id="get-games-played" class="hidden"></div>
+    </div>
+
+  <br>
+  <br>
+  <br>
 
   <form id='change-password'>
     <h2>Change Password</h2>
@@ -61,20 +71,10 @@
   </form>
 
   <br>
+    <form id= 'sign-out'>
 
-  <form id='sign-out'>
-    <h2>Sign out</h2>
-    <button class="btn btn-primary">sign-out</button>
-  </form>
+    <button class="btn btn-primary" >Sign Out</button>
 
-    <button class='btn btn-primary' id="play">New Game</button>
-
-<!-- // check -->
-  <div id="game-played">
-      <h2 class="hidden">Number of Games Played</h2>
-      <button id="games-played-button" class="hidden">Games Played</button>
-      <div id="get-games-played" class="hidden"></div>
-    </div>
 
 </body>
 

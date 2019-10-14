@@ -18,4 +18,5 @@ $(() => {
   $('#board').on('click', gamelogic.playGame)
   $('#hidden').hide()
   $('#games-played-button').on('click', gameEvents.onGamesPlayed)
+  $('#successMessagemessage').fadeout()
 })
