@@ -1,4 +1,4 @@
-'use strict'// if these don't work, check if i need ./
+'use strict'
 const config = require('../config')
 const store = require('../store')
 
@@ -8,17 +8,6 @@ const newGame = function () {
     method: 'POST',
     headers: {
       Authorization: `Token token=${store.user.token}`
-    },
-    data: '{}'
-  })
-}
-
-const getGames = function () {
-  return $.ajax({
-    url: config.apiUrl + '/games',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
     },
     data: '{}'
   })
@@ -34,17 +23,27 @@ const updateGame = function (index, value, over) {
     data: {
       game: {
         cell: {
-          index: index,
-          value: value
+          index: store.position,
+          value: store.player
         },
-        over: over
+        over: false
       }
+    }
+  })
+}
+
+const getGamesPlayed = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/games',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
 module.exports = {
   newGame,
-  getGames,
-  updateGame
+  updateGame,
+  getGamesPlayed
 }
